@@ -1,6 +1,7 @@
 import React from 'react';
 import './Profile.css'
 import Stats from './Stats';
+import PropsTypes from 'prop-types'
 
 const Profile = ({name, tag, avatar, location, stats}) => {
   return (
@@ -9,12 +10,12 @@ const Profile = ({name, tag, avatar, location, stats}) => {
     <img
       src={avatar}
       alt="user avatar"
-          className="avatar"
+          className="avatarProfile"
           width='250px'
     />
-        <p className="name">{name}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+        <p className="nameProfile">{name}</p>
+        <p className="tagProfile">{tag}</p>
+        <p className="locationProfile">{location}</p>
   </div>
 
   <ul className="stats">
@@ -25,3 +26,10 @@ const Profile = ({name, tag, avatar, location, stats}) => {
 };
 
 export default Profile;
+
+Profile.propsTypes = {
+  name: PropsTypes.string.isRequired,
+  tag: PropsTypes.string.isRequired,
+  location: PropsTypes.string.isRequired,
+  stats: PropsTypes.string.isRequired,
+}

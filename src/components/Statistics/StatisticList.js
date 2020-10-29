@@ -1,8 +1,9 @@
 import React from 'react';
+import PropsTypes from 'prop-types'
 
 const StatisticList = ({label,percentage}) => {
   return (
-    <li className="item">
+    <li className="itemStatistic">
       <span className="label">{label}</span>
       <span className="percentage">{percentage}%</span>
     </li>
@@ -10,3 +11,8 @@ const StatisticList = ({label,percentage}) => {
 };
 
 export default StatisticList;
+
+StatisticList.propsTypes = {
+  label: PropsTypes.string.isRequired,
+  percentage: PropsTypes.number.isRequired
+}

@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(59, 100, 100);
+}
+
+.titleStatistic {
+  padding-top: 20px;
+text-align: center;
+}
+
+.stat-list {
+  background-color: black;
+  font-size: 18px;
+   list-style: none;
+  display: flex;
+      margin: 0 auto;
+  border: 2px solid rgb(93, 21, 21);
+width: max-content;border-radius: 10px;
+
+}
+
+.itemStatistic {
+  margin-right: 20px;
+}
+
+.itemStatistic:nth-child(odd) {
+  background-color: rgb(158, 103, 51);
+  border-radius: 9px;
+}
+
+.itemStatistic:nth-child(even) {
+  background-color: brown;
+    border-radius: 8px;
+}
